@@ -1,16 +1,14 @@
-# Little-Steps
-A simple and soft productivity web app that helps you stay focused through small tasks and gentle visuals.
+# 🌿 Little Steps
 
-✨ Features
-Add and manage your tasks
+A soft and simple productivity web app designed to help you stay focused through small, gentle steps.
 
-25‑minute session timer
+## ✨ Features
+- 📝 Add and manage your tasks
+- ⏳ 25‑minute session timer
+- 🌙 Light & dark theme toggle
+- 🤎 Brown‑heart click effect
+- 📱 Responsive and clean UI
 
-Light & dark theme
+## 💛 About
+Little Steps is built to make productivity feel calm, cozy, and enjoyable — one small step at a time.
 
-Cute brown‑heart click effect
-
-Clean and cozy UI
-
-💛 About
-Little Steps is built to make productivity feel lighter, calmer, and more enjoyable — one small step at a time.
