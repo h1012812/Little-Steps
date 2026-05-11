@@ -15,3 +15,7 @@ Your tasks stay safely stored in the browser, making the experience smoother and
 ## 💛 About
 Little Steps is built to make productivity feel calm, cozy, and enjoyable — one small step at a time.
 
+## 🎨 Theme Inspiration
+The theme idea was inspired by another creator.  
+I customized it and built the rest of the project with my own style and features.
+
