@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="ar" data-theme="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Little Steps | Hanin</title>
+
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="style.css">
+
+    <!-- JavaScript -->
+    <script defer src="script.js"></script>
+</head>
+
+<body>
+
+<!-- =========================================
+     HEADER
+========================================= -->
+<header>
+    <div class="header-left">
+        <span class="hamburger">
+            <img src="menu.png" alt="Menu">
+        </span>
+
+        <div class="logo">
+            <img src="logo.png" alt="Logo">
+        </div>
+    </div>
+
+    <div class="header-right">
+        <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode">
+            <span class="icon active" id="sunIcon">
+                <img src="SunToggle.png" alt="Light">
+            </span>
+            <span class="icon" id="moonIcon">
+                <img src="MoonToggle.png" alt="Dark">
+            </span>
+        </button>
+    </div>
+</header>
+
+
+<!-- =========================================
+     MAIN CONTENT
+========================================= -->
+<main>
+    <div class="page-content">
+
+        <!-- Slogan -->
+        <div class="slogan">
+            <img src="slogan.png" alt="Slogan">
+        </div>
+
+        <!-- =====================================
+             TASKS SECTION
+        ====================================== -->
+        <div class="session-tasks">
+
+            <label class="tasks-label">What will you focus on this session?</label>
+
+            <div class="tasks-input-row">
+                <input type="text" id="task-input" placeholder="Write your task here...">
+                <button id="add-task-btn">Add</button>
+            </div>
+
+            <div class="current-task">
+                <span class="current-task-title">Current focus:</span>
+                <span id="current-task-text">No task yet</span>
+            </div>
+
+            <ul id="tasks-list"></ul>
+        </div>
+
+
+        <!-- =====================================
+             TIMER SECTION
+        ====================================== -->
+        <div class="timer-container">
+            <svg class="progress-ring" width="180" height="180">
+                <circle class="progress-ring__circle"
+                        stroke="#A3A3A3"
+                        stroke-width="6"
+                        fill="transparent"
+                        r="80"
+                        cx="90"
+                        cy="90" />
+            </svg>
+
+            <div class="timer-display">25:00</div>
+        </div>
+
+        <div class="timer-buttons">
+            <button id="pause-btn">Pause</button>
+            <button id="start-btn">Start</button>
+            <button id="reset-btn">Reset</button>
+        </div>
+
+    </div>
+</main>
+</body>
+</html>
+
+
+
+
+
+
+       
+
+
+
+

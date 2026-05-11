@@ -1,0 +1,322 @@
+/* =========================================
+   RESET
+========================================= */
+*, *::before, *::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+
+/* =========================================
+   ROOT (LIGHT THEME)
+========================================= */
+:root {
+    --bg-page: #f3dfa7;
+    --bg-input: #fff;
+    --border-input: #4A8C72;
+    --text-primary: #2C2418;
+    --text-secondary: #7A6A56;
+    --text-label: #3A6B52;
+    --accent-coral: #c0694c;
+
+    --btn-bg: #3A6B52;
+    --btn-text: #fff;
+
+    --toggle-track: #d3c090;
+    --toggle-thumb: #3A6B52;
+
+    --header-bg: #ecd096;
+    --input-shadow: rgba(74,140,114,0.15);
+}
+
+
+/* =========================================
+   DARK THEME
+========================================= */
+[data-theme="dark"] {
+    --bg-page: #36312a;
+    --bg-input: #2A2318;
+    --border-input: #5DCAA5;
+    --text-primary: #F0E8D5;
+    --text-secondary: #A89880;
+    --text-label: #5DCAA5;
+    --accent-coral: #F0997B;
+
+    --btn-bg: #5DCAA5;
+    --btn-text: #1C1812;
+
+    --toggle-track: #4c4436;
+    --toggle-thumb: #5DCAA5;
+
+    --header-bg: #24221e;
+    --input-shadow: rgba(93,202,165,0.1);
+}
+
+
+/* =========================================
+   GLOBAL BUTTON FONT
+========================================= */
+button {
+    font-family: 'Nunito', sans-serif;
+    font-size: 16px;
+    font-weight: 600;
+}
+
+
+/* =========================================
+   BODY
+========================================= */
+body {
+    background: var(--bg-page);
+    color: var(--text-primary);
+    font-family: 'Nunito', sans-serif;
+    font-weight: 600;
+    min-height: 100vh;
+    transition: 0.3s;
+
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+
+
+
+/* =========================================
+   HEADER
+========================================= */
+header {
+    position: fixed;
+    top: 0; left: 0; right: 0;
+    height: 60px;
+    background: var(--header-bg);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 28px;
+    z-index: 100;
+}
+
+.header-left, .header-right {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+}
+
+.logo img { height: 45px; margin-top: 10px; }
+.hamburger img { height: 28px; }
+
+
+/* =========================================
+   THEME TOGGLE
+========================================= */
+.theme-toggle {
+    display: flex;
+    align-items: center;
+    background: var(--toggle-track);
+    border-radius: 20px;
+    padding: 3px;
+    border: none;
+    cursor: pointer;
+    gap: 2px;
+    transition: 0.2s;
+}
+
+.theme-toggle:hover {
+    transform: scale(1.05);
+}
+
+.theme-toggle .icon {
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.theme-toggle .icon.active {
+    background: var(--toggle-thumb);
+}
+
+.theme-toggle img {
+    width: 24px;
+}
+
+
+/* =========================================
+   SLOGAN
+========================================= */
+.slogan {
+    display: flex;
+    justify-content: center;
+    margin-top: 100px;
+}
+
+.slogan img {
+    width: 300px;
+    max-width: 80%;
+}
+
+
+/* =========================================
+   PAGE CONTENT
+========================================= */
+.page-content {
+    width: 100%;
+    max-width: 800px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+/* =========================================
+   TASKS
+========================================= */
+.session-tasks {
+    width: 100%;
+    max-width: 320px;
+    margin: 20px auto;
+    font-family: 'Poppins', sans-serif;
+}
+
+.tasks-label {
+    font-size: 14px;
+    margin-bottom: 8px;
+    color: var(--text-label);
+}
+
+.tasks-input-row {
+    display: flex;
+    gap: 8px;
+    margin-bottom: 12px;
+}
+
+#task-input {
+    flex: 1;
+    padding: 8px 10px;
+    border-radius: 8px;
+    border: 1px solid var(--border-input);
+    background: var(--bg-input);
+    color: var(--text-primary);
+    box-shadow: 0 0 6px var(--input-shadow);
+}
+
+#task-input:focus {
+    outline: none;
+    border-color: var(--accent-coral);
+}
+
+#add-task-btn {
+    padding: 8px 14px;
+    border-radius: 8px;
+    border: none;
+    background: var(--btn-bg);
+    color: var(--btn-text);
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+#add-task-btn:hover {
+    transform: scale(1.05);
+    opacity: 0.9;
+}
+
+.current-task {
+    font-size: 13px;
+    margin-bottom: 8px;
+    color: var(--text-secondary);
+}
+
+.current-task-title {
+    font-weight: 600;
+}
+
+#tasks-list {
+    list-style: none;
+}
+
+#tasks-list li {
+    background: var(--bg-input);
+    border: 1px solid var(--border-input);
+    padding: 6px 8px;
+    border-radius: 8px;
+    margin-bottom: 4px;
+    display: flex;
+    justify-content: space-between;
+    cursor: pointer;
+}
+
+.delete-task {
+    background: none;
+    border: none;
+    color: var(--text-secondary);
+    font-size: 16px;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.delete-task:hover {
+    color: var(--accent-coral);
+    transform: scale(1.2);
+}
+
+
+/* =========================================
+   TIMER
+========================================= */
+.timer-container {
+    width: 180px;
+    height: 220px;
+    position: relative;
+    text-align: center;
+}
+
+.timer-display {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -60%);
+    font-size: 32px;
+}
+
+.progress-ring__circle {
+    transition: stroke-dashoffset 1s linear;
+    stroke: var(--border-input);
+}
+
+.timer-buttons {
+    margin-top: 10px;
+    display: flex;
+    gap: 10px;
+}
+
+.timer-buttons button {
+    padding: 8px 16px;
+    border-radius: 10px;
+    border: none;
+    background: var(--btn-bg);
+    color: var(--btn-text);
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.timer-buttons button:hover {
+    transform: scale(1.05);
+    opacity: 0.9;
+}
+
+
+/* =========================================
+   RESPONSIVE
+========================================= */
+@media (max-width: 680px) {
+    header { padding: 0 16px; }
+    .slogan img { width: 70%; }
+    .timer-display { font-size: 26px; }
+}
+
+
+
